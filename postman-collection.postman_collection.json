@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "dfd8c2bd-992d-4c32-a727-362bfdc612d0",
+		"name": "postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19685571"
+	},
+	"item": [
+		{
+			"name": "createAuthor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjk4NWM0MTYzY2M4NDRkNmM2Y2M3ZWMiLCJpYXQiOjE2NTQxNTIyNjYsImV4cCI6MTY1NDE5NTQ2Nn0.PpA61uiDwWeFAHPRtbdGzq6RgxK0nvVyP_Lk_uMxRyw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content_Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "OK-ACCESS-KEY",
+						"value": "7638919e-0423-4af7-8850-c4eb4c3e402a",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "OK-ACCESS-SIGN",
+						"value": "CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA256(timestamp + 'GET' + '/users/self/verify', 9B2B218BEE45FD177239D0A32E666BE58))",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"richard\",\r\n    \"email\":\"richard199@gmail.com\",\r\n    \"password\":\"richard@123Q\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createAuthor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createAuthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginaauhor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"email\":\"richard199@gmail.com\",\r\n    \"password\":\"richard@123Q\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBlog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "OK-ACCESS-KEY",
+						"value": "98bfae6f-cbf6-41d0-9326-b7d42572acd7",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "OK-ACCESS-SIGN",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDU0NTQwYjM1NmU4Y2Y4ZThhYTgzOSIsImlhdCI6MTY2NTQ4NDEyNH0.0s9oVAICy8VG4RHqOwUqFZd0KrgWRllF6zL6mWoxlmg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"criket\",\r\n    \"body\": \"hello i noda \",\r\n    \"authorId\": { \r\n        \r\n    },\r\n   \"category\":[\r\n        \"muwish\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/blogs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getblogbyid",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "OK-ACCESS-KEY",
+						"value": "98bfae6f-cbf6-41d0-9326-b7d42572acd7",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "OK-ACCESS-SIGN",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDU0OTk3ZWJlNTliODVmOGRlOTVkNSIsImlhdCI6MTY2NTQ4NTIyMX0.T2d3pcAbkhwP4-_QByhcaaYRayc8upQu3TZaTJXoK4k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/getBlogById",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getBlogById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/getblog",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getblog"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,6 @@
 ### Node-Js-Backend-Task
-
+postman colletton link
+https://www.getpostman.com/collections/4aea9831762adff8dde6
 1- Create a simple REST API to create and list blog posts using express js, typescript,
 sqlite.
 POST title, body and category
